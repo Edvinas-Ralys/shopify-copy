@@ -3,9 +3,14 @@ body{
     margin: 0;
 }
 .page_container{
-    width: 70vw;
-    border: 2px solid black;
+    
+    /* border: 2px solid black; */
     height: 150vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slider{
+    width: 70vw;
     margin-left: auto;
     margin-right: auto;
 }
@@ -19,25 +24,98 @@ body{
     filter: brightness(65%);
 }
 
+
 .icon_nav_bar{
     height: 3vh;
     width: auto;
+    filter: invert(1);
 }
 .icon_container{
-    display: flex;
-    width: fit-content;
-    border: 2px solid purple;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr 0.5fr 1fr;
     justify-content: space-around;
+}
+.icon_container > .search{
+    grid-column: 3/4;
+}
+.icon_container > .cart{
+    grid-column: 5/6;
+   
 }
 .nav_top{
     display: flex;
     align-items: center;
     height: 8vh;
-    border: 2px solid white;
     justify-content: space-between;
 }
 .nav_top > .nav_title{
     margin:0;
     color: white;
     font-size: 2rem;
+}
+.nav_bottom{
+    display: flex;
+
+}
+.nav_bottom_opt{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 32vw;
+    justify-content: space-between;
+}
+
+.nav_bottom_opt > img{
+    height:3vh;
+    width: auto;
+    filter: invert(1);
+}
+.down{
+    height:2.3vh;
+}
+.shop_nav_bot, .bestseller_nav_bot, .biuld_nav_bot, .lookbook_nav_bot, .sale_nav_bot{
+    display: flex;
+    /* border: 2px solid black; */
+    align-items: center;
+    min-width: 6vw;
+    justify-content: center;
+    filter: invert(1);
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.sale_nav_bot{
+    min-width: 3vw;
+}
+.slider_full:hover{
+    background-color: white;
+    transition: 0.3s;
+}
+.slider_full{
+    transition: 0.3s;
+}
+.slider>*:hover{
+    filter:invert(1);
+    transition: 0.3s;
+}
+
+
+
+
+@media only screen and (max-width:600px) {
+    .nav_bottom_opt{
+        border: 2px solid blue;}
+}
+
+@media only screen and (max-width:960px){
+    .nav_bottom_opt{
+        border: 2px solid blue;
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        width: 65vw;
+        justify-content: space-evenly;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
