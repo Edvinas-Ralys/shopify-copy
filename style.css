@@ -1,24 +1,24 @@
+
 body{
     font-family:sans-serif ;
     margin: 0;
-    position: relative;
 }
-.page_container{
-    
-    /* border: 2px solid black; */
-    height: 150vh;
-    margin-left: auto;
-    margin-right: auto;
-}
+
+
+/* Centering top part of the slider */
 .slider{
     padding-left: 15vw;
     padding-right: 15vw;
     margin-left: auto;
     margin-right: auto;
+    background-color: rgba(137, 43, 226, 0.199);
 }
+
+
+/* Setting slider background image */
 .slider_image{
-    width: 100vw;
     height: 100vh;
+    width: 100%;
     object-fit: cover;
     position: absolute;
     z-index: -1;
@@ -28,6 +28,22 @@ body{
 }
 
 
+/* Nav top and title colors and placement */
+.nav_top{
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    justify-content: space-between;
+}
+.nav_top > .nav_title{
+    margin:0;
+    color: white;
+    font-size: 2rem;
+}
+
+
+
+/* Top nav bar icons. Colors and placement */
 .icon_nav_bar{
     height: 3vh;
     width: auto;
@@ -43,67 +59,92 @@ body{
 }
 .icon_container > .cart{
     grid-column: 5/6;
-   
 }
-.nav_top{
-    display: flex;
-    align-items: center;
-    height: 8vh;
-    justify-content: space-between;
-}
-.nav_top > .nav_title{
-    margin:0;
-    color: white;
-    font-size: 2rem;
-}
+
+
+
+/* Nav bottom part placement */
 .nav_bottom{
     display: flex;
-
+    width: 35vw;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
 }
-.nav_bottom_opt{
+
+
+/* Nav bar fade transition form background to white */
+.slider{
+    transition: 0.3s;
+}
+.slider:hover{
+    background-color: white;
+    transition: 0.3s;
+}
+nav{
+    transition: 0.3s;
+}
+.slider:hover nav{
+    filter: invert(1);
+    transition: 0.3s;
+}
+
+
+/* Underline animation */
+.shop, .bestseller, .build, .lookbook, .sale{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    width: 35vw;
-    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+}
+ .shop::after, .bestseller::after, .build::after,
+  .lookbook::after, .sale::after{
+    content: '';
+    position: absolute;
+    bottom:16px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: white;
+    transition: all 200ms ease-in-out;
+}
+.shop:hover::after{
+    width: 65%;
+}
+.bestseller:hover::after{
+    width: 75%
+}
+.build:hover::after, .lookbook:hover::after, .sale:hover::after{
+    width: 100%;
 }
 
-.nav_bottom_opt > img{
+
+/* Home image and chevron colors and placement*/
+.nav_bottom > img{
     height:3vh;
     width: auto;
     filter: invert(1);
+
 }
-.down{
+.chevron_down{
     height:2.3vh;
-}
-.shop_nav_bot, .bestseller_nav_bot, .biuld_nav_bot, .lookbook_nav_bot, .sale_nav_bot{
-    display: flex;
-    /* border: 2px solid black; */
-    align-items: center;
-    min-width: 6vw;
-    justify-content: center;
     filter: invert(1);
-    font-size: 13px;
-    font-weight: 500;
-    transition: 0.3s;
 }
-.sale_nav_bot{
-    min-width: 3vw;
+
+
+/* Dropdown menu animation with hower */
+.dropdown_menu{
+    /* dissplay: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 255, 255, 0.233);
 }
-.slider_wide:hover{
-    background-color: white;
-    border-bottom: 1px solid grey;
-    transition: 0.3s;
-}
-.slider_wide{
-    transition: 0.3s;
-}
-.slider_wide>*:hover{
-    filter:invert(1);
-    transition: 0.3s;
-}
+
+
+
 .underline_text{
-    background-image: linear-gradient(black, grey);
+    background-image: linear-gradient(0.25turn, black, grey);
     background-size: 0% 1px;
     background-repeat:no-repeat;
     background-position: left bottom;
@@ -113,31 +154,12 @@ body{
     background-size: 100% 1px;
     cursor: pointer;
 }
-.dropdown_menu{
-    display: none;
-    z-index: 1;
-}
 
-.nav_txt_shop:hover .dropdown_menu{
-    display:block;
-    position: absolute;
-    left: -18vw;
-    height: 85vh;
-    width: 100vw;
-    border-top: 1px solid grey;
-    background-color: white;
-}
-.dropdown_text_shop{
-    /* border: 2px solid black; */
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    position: relative;
-    height: 80vh;
-    width: fit-content;
-    margin-left: 15vw;
-    transition: 2s;
-}
+
+
+
+
+/* Dropdown menu formating */
 ul{
     list-style: none;
     margin-left: 0;
@@ -162,7 +184,7 @@ h4, h3{
         border: 2px solid blue;}
 } */
 
-@media only screen and (max-width:960px){
+/* @media only screen and (max-width:960px){
     .nav_bottom_opt{
         border: 2px solid blue;
         display: flex;
@@ -173,4 +195,4 @@ h4, h3{
         margin-right: auto;
         margin-left: auto;
     }
-}
+} */
