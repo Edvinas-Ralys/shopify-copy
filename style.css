@@ -1,6 +1,7 @@
 body{
     font-family:sans-serif ;
     margin: 0;
+    position: relative;
 }
 .page_container{
     
@@ -10,12 +11,14 @@ body{
     margin-right: auto;
 }
 .slider{
-    width: 70vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
     margin-left: auto;
     margin-right: auto;
 }
 .slider_image{
     width: 100vw;
+    height: 100vh;
     object-fit: cover;
     position: absolute;
     z-index: -1;
@@ -61,7 +64,7 @@ body{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    width: 32vw;
+    width: 35vw;
     justify-content: space-between;
 }
 
@@ -87,25 +90,77 @@ body{
 .sale_nav_bot{
     min-width: 3vw;
 }
-.slider_full:hover{
+.slider_wide:hover{
     background-color: white;
+    border-bottom: 1px solid grey;
     transition: 0.3s;
 }
-.slider_full{
+.slider_wide{
     transition: 0.3s;
 }
-.slider>*:hover{
+.slider_wide>*:hover{
     filter:invert(1);
     transition: 0.3s;
 }
+.underline_text{
+    background-image: linear-gradient(black, grey);
+    background-size: 0% 1px;
+    background-repeat:no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease;
+}
+.underline_text:hover{
+    background-size: 100% 1px;
+    cursor: pointer;
+}
+.dropdown_menu{
+    display: none;
+    z-index: 1;
+}
+
+.nav_txt_shop:hover .dropdown_menu{
+    display:block;
+    position: absolute;
+    left: -18vw;
+    height: 85vh;
+    width: 100vw;
+    border-top: 1px solid grey;
+    background-color: white;
+}
+.dropdown_text_shop{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    height: 80vh;
+    width: fit-content;
+    margin-left: 15vw;
+    transition: 2s;
+}
+ul{
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 0.8vh;
+}
+li{
+    line-height: 1.5rem;
+    width: fit-content;
+
+}
+h4, h3{
+    margin-bottom: 0;
+    margin-top: 3vh;
+    width: fit-content;
+}
 
 
 
-
-@media only screen and (max-width:600px) {
+/* @media only screen and (max-width:600px) {
     .nav_bottom_opt{
         border: 2px solid blue;}
-}
+} */
 
 @media only screen and (max-width:960px){
     .nav_bottom_opt{
