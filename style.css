@@ -181,25 +181,58 @@ nav{
     width: 70vw;
     margin-left: 15vw;
     color: black;
-    border: 2px solid black
+    /* border: 2px solid black */
 }
 .dropdown_menu_content{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
-.trending_img{
+
+/* First image in shop dropdown */
+.trending_selection, .bestseller_selection{
+    margin-top: 2vh;
+    height: fit-content;
+}
+.trending_img, .bestseller_img{
     width: 22vw;
     height: auto;
-    margin-top:3vh;
     transition: 0.3s;
+    overflow: hidden;
 }
-.trending_img:hover{
+.trending_img:hover, .bestseller_img:hover{
     scale: 1.05;
     overflow: hidden;
     transition: 0.3s;
 }
+.trending_img_border, .bestseller_img_border{
+    height: 40vh;
+    width: 22vw;
+    overflow: hidden;
+}
+.trending_selection h4{
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+}
+.trending_selection p{
+    padding: 0;
+    margin: 30px 5px 0 0;
+}
 
+/* Second image in shop dropdown menu */
+.bestseller_img_border{
+    height: 48vh;
+}
+.bestseller_selection h4{
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+}
+.bestseller_selection p{
+    padding: 0;
+    margin: 30px 5px 0 0;
+}
 
 
 
