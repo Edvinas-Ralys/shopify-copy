@@ -12,49 +12,71 @@
 <body>
     <main>
        <img class="slider_image" src="images/slider-background.png" alt="slider image">
-
+        
         <div class="slider">
                 <nav>
                     <div class="nav_top">
-                        <h1 class="nav_title">objects</h1>
+                        <h1 class="nav_title to_black">objects</h1>
                         <div class="icon_container">
-                            <img class="icon_nav_bar box" src="icons/biuld.svg" alt="biuld">
-                            <img class="icon_nav_bar search" src="icons/search.svg" alt="search">
-                            <img class="icon_nav_bar cart" src="icons/cart.svg" alt="cart">
+                            <svg class="icon_nav_bar box" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" /></svg>
+                            <svg class="icon_nav_bar search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+                            <svg class="icon_nav_bar cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M17,18A2,2 0 0,1 19,20A2,2 0 0,1 17,22C15.89,22 15,21.1 15,20C15,18.89 15.89,18 17,18M1,2H4.27L5.21,4H20A1,1 0 0,1 21,5C21,5.17 20.95,5.34 20.88,5.5L17.3,11.97C16.96,12.58 16.3,13 15.55,13H8.1L7.2,14.63L7.17,14.75A0.25,0.25 0 0,0 7.42,15H19V17H7C5.89,17 5,16.1 5,15C5,14.65 5.09,14.32 5.24,14.04L6.6,11.59L3,4H1V2M7,18A2,2 0 0,1 9,20A2,2 0 0,1 7,22C5.89,22 5,21.1 5,20C5,18.89 5.89,18 7,18M16,11L18.78,6H6.14L8.5,11H16Z" /></svg>
                         </div>
                     </div>
                     <div class="nav_bottom">
-                        <img src="icons/home.svg" alt="home">
+                        <svg class="icon_nav_bar home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg>
 
-
+                        
+                        
 
 
                                 
                         <div class="shop">
-                            <p class="shop_menu_title">Shop</p>
+                            <p class="to_black shop_menu_title underline_text">Shop</p>
                             <div class="dropdown_menu">
-                                <h3 class="underline_text">All products</h3>
-                                <div class="set_and_bundles">
-                                    <h4 class="underline_text">Set and Bundles</h4>
-                                    <ul>
-                                        <li class="underline_text">2 Glasses and Carafe</li>
-                                        <li class="underline_text">Bronzed Brass Candleholder Set</li>
-                                        <li class="underline_text">4 Planters Set</li>
-                                        <li class="underline_text">Candleholder Set</li>
-                                        <li class="underline_text">Glass Vases set</li>
-                                    </ul>
-                                </div>
-                                <div class="collections">
-                                    <h4 class="underline_text">Collections</h4>
-                                    <ul>
-                                        <li class="underline_text">&Tradition</li>
-                                        <li class="underline_text">Glassware</li>
-                                        <li class="underline_text">W&S Collection</li>
-                                        <li class="underline_text">Textiles</li>
-                                    </ul>
+                                <div class="dropdown_menu_content">
+                                    <div class="product_list">
+                                        <h3 class="underline_text products">All products</h3>
+                                        <div class="set_and_bundles">
+                                            <h4 class="underline_text">Set and Bundles</h4>
+                                            <ul class="shop_list">
+                                                <li class="underline_text">2 Glasses and Carafe</li>
+                                                <li class="underline_text">Bronzed Brass Candleholder Set</li>
+                                                <li class="underline_text">4 Planters Set</li>
+                                                <li class="underline_text">Candleholder Set</li>
+                                                <li class="underline_text">Glass Vases set</li>
+                                            </ul>
+                                        </div>
+                                        <div class="collections">
+                                            <h4 class="underline_text">Collections</h4>
+                                            <ul class="shop_list">
+                                                <li class="underline_text">&Tradition</li>
+                                                <li class="underline_text">Glassware</li>
+                                                <li class="underline_text">W&S Collection</li>
+                                                <li class="underline_text">Textiles</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="trending_selection">
+                                        <img class="trending_img" src="images/trending_img.png" alt="">
+                                        <p class="trending_txt img_txt">
+                                            Trending
+                                        </p>
+                                        <p>
+                                            Biuld your set and save
+                                        </p>
+                                    </div>
+                                    <div class="bestseller_selection">
+
+                                    </div>
                                 </div>
                             </div>
-                            <img class="chevron_down" src="icons/down.svg">
+                            <svg class="icon_nav_bar chevron_down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                         </div>
 
 
@@ -62,28 +84,29 @@
 
 
                         <div class="bestseller">
-                            <p class="bestseller_menu_title">Bestseller</p>
-                            <img class="chevron_down" src="icons/down.svg" alt="">
+                            <p class="to_black bestseller_menu_title underline_text">Bestseller</p>
+                            <svg class="icon_nav_bar chevron_down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                         </div>
 
 
 
-                        <div class="build">
-                            <p class="nav_txt">Build Your Set</p>
-                        </div>
-
-
-
-
-                        <div class="lookbook">
-                            <p class="nav_txt">Lookbook</p>
+                        <div class="to_black build">
+                            <p class="nav_txt underline_text">Build Your Set</p>
                         </div>
 
 
 
 
-                        <div class="sale">
-                            <p class="nav_txt">SALE</p>
+                        <div class="to_black lookbook">
+                            <p class="nav_txt underline_text">Lookbook</p>
+                        </div>
+
+
+
+
+                        <div class="to_black sale">
+                            <p class="nav_txt underline_text">SALE</p>
                         </div>
                     </div>
                 </nav>

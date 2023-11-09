@@ -11,7 +11,6 @@ body{
     padding-right: 15vw;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(137, 43, 226, 0.199);
 }
 
 
@@ -47,7 +46,7 @@ body{
 .icon_nav_bar{
     height: 3vh;
     width: auto;
-    filter: invert(1);
+    fill: white;
 }
 .icon_container{
     display: grid;
@@ -80,18 +79,33 @@ body{
 .slider:hover{
     background-color: white;
     transition: 0.3s;
+    color: black;
+}
+.slider:hover .to_black{
+    color: black;
+}
+.slider:hover .icon_nav_bar{
+    fill: black;
 }
 nav{
     transition: 0.3s;
 }
-.slider:hover nav{
-    filter: invert(1);
-    transition: 0.3s;
+
+/* Formating bottom nav */
+.shop, .bestseller, .build, .lookbook, .sale{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.chevron_down{
+    height:2.3vh;
 }
 
 
+
 /* Underline animation */
-.shop, .bestseller, .build, .lookbook, .sale{
+/* Animation with pseudo elements. Doesnt worki with relative positin */
+/* .shop, .bestseller, .build, .lookbook, .sale{
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -116,6 +130,19 @@ nav{
 }
 .build:hover::after, .lookbook:hover::after, .sale:hover::after{
     width: 100%;
+} */
+
+/* Underline animation with background image */
+.underline_text{
+    background-image: linear-gradient(0.25turn, black ,black);
+    background-size: 0% 1px;
+    background-repeat:no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease;
+}
+.underline_text:hover{
+    background-size: 100% 1px;
+    cursor: pointer;
 }
 
 
@@ -126,34 +153,58 @@ nav{
     filter: invert(1);
 
 }
-.chevron_down{
-    height:2.3vh;
-    filter: invert(1);
-}
 
 
 /* Dropdown menu animation with hower */
 .dropdown_menu{
-    /* dissplay: none; */
+    /* display: none; */
     position: absolute;
-    top: 0;
+    top: 120px;
     left: 0;
-    background-color: rgba(0, 255, 255, 0.233);
+    width: 100vw;
+    height: 87vh; 
+    background-color: white;
+}
+
+
+/* Dropdown menu content design and pplacement */
+.shop_list > *{
+    line-height: 2.3rem;
+}
+.collections{
+    margin-top: 10vh;
+}
+.shop:hover .dropdown_menu{
+    display: block;
+}
+.dropdown_menu_content{
+    width: 70vw;
+    margin-left: 15vw;
+    color: black;
+    border: 2px solid black
+}
+.dropdown_menu_content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.trending_img{
+    width: 22vw;
+    height: auto;
+    margin-top:3vh;
+    transition: 0.3s;
+}
+.trending_img:hover{
+    scale: 1.05;
+    overflow: hidden;
+    transition: 0.3s;
 }
 
 
 
-.underline_text{
-    background-image: linear-gradient(0.25turn, black, grey);
-    background-size: 0% 1px;
-    background-repeat:no-repeat;
-    background-position: left bottom;
-    transition: background-size 300ms ease;
-}
-.underline_text:hover{
-    background-size: 100% 1px;
-    cursor: pointer;
-}
+
+
+
 
 
 
@@ -167,9 +218,10 @@ ul{
     margin-top: 0.8vh;
 }
 li{
-    line-height: 1.5rem;
+    /* line-height: 1.5rem; */
     width: fit-content;
-
+    height: 28px;
+    margin-bottom: 8px;
 }
 h4, h3{
     margin-bottom: 0;
