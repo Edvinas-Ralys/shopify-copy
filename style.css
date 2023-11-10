@@ -4,9 +4,6 @@ body{
     margin: 0;
     overflow-x: hidden;
 }
-main{
-}
-
 
 /* Centering top part of the slider */
 .slider{
@@ -264,7 +261,6 @@ nav{
 
 }
 
-
 /* Dropdown menu animation with hower. SHOP */
 @keyframes fadeOut{
     0% {opacity: 1;}
@@ -293,18 +289,24 @@ nav{
     animation: fadeIn 0.3s;
 }
 .dropdown_menu_bestseller{
-    /* display: none; */
-    /* opacity: 60%; */
+    display: none;
+    opacity: 60%;
     position: absolute;
     top: 120px;
     left: 0;
     width: 100vw;
-    height: 50vh;
+    height: 55vh;
     transition: transform 2s ease-in-out;
     background-color: white;
     animation: fadeOut 0.3s;
     overflow: hidden;
 }
+.bestseller:hover .dropdown_menu_bestseller{
+    display: block;
+    opacity: 100%;
+    animation: fadeIn 0.3s;
+}
+
 .bestseller_items{
     width: 70vw;
     /* border:2px solid black; */
@@ -315,11 +317,9 @@ nav{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap:2vw;
+    overflow: hidden;
 }
-.bestseller_item{
-    width: 10vw;
-    color: black;
-}
+
 .bestseller_1{
     width: 11vw;
     height: auto;
@@ -328,26 +328,39 @@ nav{
     color: grey;
     text-decoration: line-through;
 }
-.bestseller_item h4{
-    margin-top:0;
-}
-.bestseller_item p{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.bestseller_item:hover h4{
 
-}
 .underline_text_cont{
-    background-image: linear-gradient(0.25turn, black ,black);
+    text-decoration: none;
+    background-image: linear-gradient(black, black);
+    background-repeat: no-repeat;
+    background-position: bottom left;
     background-size: 0% 1px;
-    background-repeat:no-repeat;
-    background-position: left bottom;
-    transition: background-size 300ms ease;
+    transition: background-size 0.2s ease-in-out;
+    font-weight: 700;
 }
-.bestseller_item:hover h4{
+.bestseller_item{
+    width: 10vw;
+    color: black;
+}
+.bestseller_item:hover .underline_text_cont{
     background-size: 100% 1px;
-    cursor: pointer;
+    color: inherit;
+}
+.bestseller_item:hover img{
+    position: relative;
+    top: -15px;
+}
+.more_products{
+    width: 15vw;
+    height: 5vh;
+    border-radius: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: 1px solid grey;
+    margin-left: 15vw;
+    margin-top: 5vh;
 }
 
 
