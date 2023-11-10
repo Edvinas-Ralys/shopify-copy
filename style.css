@@ -10,9 +10,7 @@ main{
 
 /* Centering top part of the slider */
 .slider{
-    padding-left: min(500px);
-    padding-left: max(15vw);
-
+    padding-left:15vw;
     padding-right: 15vw;
     margin-left: auto;
     margin-right: auto;
@@ -57,7 +55,6 @@ main{
     position: absolute;
     top: 0;
 }
-
 .icon_container{
     display: grid;
     grid-template-columns: 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
@@ -77,6 +74,10 @@ main{
     grid-column: 7/8 ;
     display: none;
 }
+
+
+/* Search and cart pop-out menus */
+/* SEARCH MENU */
 .search_window, .shopping_cart_menu{
     display: flex;
     flex-direction: column;
@@ -84,16 +85,20 @@ main{
     width: 25vw;
     height: 100vh;
     position: absolute;
-    /* border:5px solid green; */
     top: 0;
     right: 0;
     transform: translateX(30vw);
     transition: transform 0.3s ease-in-out;
 }
-input:checked + .search_window{
-    transform: translateX(0);
+.search_win_top> h4{
+    margin-top: 0;
+    margin-bottom: 0;
 }
-input:checked + .shopping_cart_menu{
+.shopping_cart_bot > p{
+    padding-left: 2vw;
+    margin-top:3vh;
+}
+input:checked + .search_window{
     transform: translateX(0);
 }
 .search_win_top, .shopping_cart_top{
@@ -107,9 +112,27 @@ input:checked + .shopping_cart_menu{
     border-bottom: 1px solid grey;
     border-bottom: 1px solid grey;
 }
-.search_win_top> h4{
-    margin-top: 0;
-    margin-bottom: 0;
+.search_input{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 4vh;
+    width: 19vw;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 3vh;
+    border: 1px solid grey;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+.search_input:focus{
+    outline:none;
+    box-shadow: 0 0 10px grey;
+    transition: 0.2s ease-in-out;
+}
+/* SHOPPING CART MENU */
+input:checked + .shopping_cart_menu{
+    transform: translateX(0);
 }
 .shopping_cart_top > h4{
     margin-top: 0;
@@ -136,35 +159,13 @@ input:checked + .shopping_cart_menu{
     margin-right: auto;
     color: white;
 }
-.shopping_cart_bot > p{
-    padding-left: 2vw;
-    margin-top:3vh;
-}
 .close{
     height: 3vh;
     width: auto;
     fill: black;
     cursor: pointer;
 }
-.search_input{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    height: 4vh;
-    width: 19vw;
-    margin-left:auto;
-    margin-right: auto;
-    margin-top: 3vh;
-    border: 1px solid grey;
-    border-radius: 5px;
-    transition: 0.2s ease-in-out;
-}
 
-.search_input:focus{
-    outline:none;
-    box-shadow: 0 0 10px grey;
-    transition: 0.2s ease-in-out;
-}
 
 
 
@@ -264,7 +265,7 @@ nav{
 }
 
 
-/* Dropdown menu animation with hower */
+/* Dropdown menu animation with hower. SHOP */
 @keyframes fadeOut{
     0% {opacity: 1;}
     100% {opacity: 0;}
@@ -273,7 +274,7 @@ nav{
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
-.dropdown_menu{
+.dropdown_menu_shop{
     display: none;
     opacity: 0;
     position: absolute;
@@ -286,21 +287,78 @@ nav{
     animation: fadeOut 0.3s;
     overflow: hidden;
 }
-.shop:hover .dropdown_menu{
+.shop:hover .dropdown_menu_shop{
     display: block;
     opacity: 100%;
     animation: fadeIn 0.3s;
 }
+.dropdown_menu_bestseller{
+    /* display: none; */
+    /* opacity: 60%; */
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    transition: transform 2s ease-in-out;
+    background-color: white;
+    animation: fadeOut 0.3s;
+    overflow: hidden;
+}
+.bestseller_items{
+    width: 70vw;
+    /* border:2px solid black; */
+    height: fit-content;
+    margin-top: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap:2vw;
+}
+.bestseller_item{
+    width: 10vw;
+    color: black;
+}
+.bestseller_1{
+    width: 11vw;
+    height: auto;
+}
+.cross_out{
+    color: grey;
+    text-decoration: line-through;
+}
+.bestseller_item h4{
+    margin-top:0;
+}
+.bestseller_item p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.bestseller_item:hover h4{
+
+}
+.underline_text_cont{
+    background-image: linear-gradient(0.25turn, black ,black);
+    background-size: 0% 1px;
+    background-repeat:no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease;
+}
+.bestseller_item:hover h4{
+    background-size: 100% 1px;
+    cursor: pointer;
+}
 
 
-/* Dropdown menu content design and pplacement */
+
+/* Dropdown menu content design and placement. SHOP */
 .shop_list > *{
     line-height: 2.3rem;
 }
 .collections{
     margin-top: 10vh;
 }
-
 .dropdown_menu_content{
     width: 70vw;
     margin-left: 15vw;
@@ -312,7 +370,6 @@ nav{
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
-
 /* First image in shop dropdown */
 .trending_selection, .bestseller_selection{
     margin-top: 2vh;
@@ -323,9 +380,7 @@ nav{
     height: auto;
     transition: 0.3s;
     overflow: hidden;
-    /* border:2px solid black */
 }
-
 .trending_img:hover, .bestseller_img:hover{
     scale: 1.05;
     overflow: hidden;
@@ -335,7 +390,6 @@ nav{
     height: fit-content;
     width: fit-content;
     overflow: hidden;
-    /* border:2px solid rgb(209, 33, 33); */
 }
 .trending_selection h4{
     text-decoration: underline;
@@ -346,9 +400,7 @@ nav{
     padding: 0;
     margin: 30px 5px 0 0;
 }
-
 /* Second image in shop dropdown menu */
-
 .bestseller_selection h4{
     text-decoration: underline;
     padding: 0;
@@ -358,8 +410,6 @@ nav{
     padding: 0;
     margin: 30px 5px 0 0;
 }
-
-
 /* Dropdown menu formating */
 ul{
     list-style: none;
