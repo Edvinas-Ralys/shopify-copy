@@ -65,18 +65,19 @@ main{
     width: 14vw;
     justify-items: center;
 }
-.icon_container > .search_menu{
+.icon_container > .search_menu, .shopping_cart{
     grid-column: 3/4;
     cursor: pointer;
 }
-.icon_container > .cart{
+.icon_container > .shopping_cart{
     grid-column: 5/6;
+    cursor: pointer;
 }
 .icon_container > .menu{
     grid-column: 7/8 ;
     display: none;
 }
-.search_window{
+.search_window, .shopping_cart_menu{
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -89,7 +90,13 @@ main{
     transform: translateX(30vw);
     transition: transform 0.3s ease-in-out;
 }
-.search_win_top{
+input:checked + .search_window{
+    transform: translateX(0);
+}
+input:checked + .shopping_cart_menu{
+    transform: translateX(0);
+}
+.search_win_top, .shopping_cart_top{
     display: flex;
     height: 9vh;
     align-items: center;
@@ -100,9 +107,38 @@ main{
     border-bottom: 1px solid grey;
     border-bottom: 1px solid grey;
 }
-.search_win_top > h4{
+.search_win_top> h4{
     margin-top: 0;
     margin-bottom: 0;
+}
+.shopping_cart_top > h4{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.shopping_cart_bot{
+    display: flex;
+    flex-direction: column;
+}
+.browsing_button{
+    margin-top: 2vh;
+    display: flex;
+    width: fit-content;
+    height: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 21vw;
+    border-radius:6vh;
+    background-color: black;
+    cursor: pointer;
+}
+.browsing_button > p{
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+.shopping_cart_bot > p{
+    padding-left: 2vw;
+    margin-top:3vh;
 }
 .close{
     height: 3vh;
@@ -129,12 +165,8 @@ main{
     box-shadow: 0 0 10px grey;
     transition: 0.2s ease-in-out;
 }
-input:checked + .search_window{
-    transform: translateX(0);
-}
-input:checked + main{
-    background-color: black;
-}
+
+
 
 
 /* Nav bottom part placement */
