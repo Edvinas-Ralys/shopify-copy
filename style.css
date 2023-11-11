@@ -46,7 +46,7 @@ nav{
     align-items: center;
     height: 8vh;
     justify-content: space-between;
-    width: 70vw;
+    width: 100%;
 }
 .nav_top > .nav_title{
     margin:0;
@@ -68,21 +68,19 @@ nav{
 }
 .icon_container{
     display: grid;
-    grid-template-columns: 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-around;
-    width: 14vw;
+    width: fit-content;
+    gap:10px;
     justify-items: center;
 }
 .icon_container > .search_menu, .shopping_cart{
-    grid-column: 3/4;
     cursor: pointer;
 }
 .icon_container > .shopping_cart{
-    grid-column: 5/6;
     cursor: pointer;
 }
-.icon_container > .menu{
-    grid-column: 7/8 ;
+.icon_container .menu{
     display: none;
 }
 
@@ -175,6 +173,11 @@ input:checked + .shopping_cart_menu{
     width: auto;
     fill: black;
     cursor: pointer;
+}
+input{
+    position: absolute;
+    display: none;
+    top: 0;
 }
 
 
@@ -380,7 +383,8 @@ nav{
 
 /* Dropdown menu content design and placement. SHOP */
 .shop_list > *{
-    line-height: 2.3rem;
+    height: fit-content;
+    display: flex;
 }
 .collections{
     margin-top: 10vh;
@@ -497,9 +501,11 @@ h4, h3{
     justify-content: center;
 }
 .kit_up_content{
+    width: 100%;
     justify-content: center;
     display: flex;
     flex-direction: column;
+    height: fit-content;
 }
 .kit_up_top{
     display: flex;
@@ -519,18 +525,19 @@ h4, h3{
 
 /* Kit up bottom */
 .kit_up_bottom{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2vw;
 }
 .kit_img{
-    width: 22vw;
+    width: 100%;
     height: 70vh;
     overflow: hidden;
     border-radius: 1rem;
 }
 .kit_img > img{
     height: 50vh;
-    width: 22vw;
+    width: 100%;
     object-fit: cover;
     border: none;
     margin:0;
@@ -547,8 +554,8 @@ h4, h3{
     border: none;
     position: relative;
     top:-4px;
-    height: 22vh;
-    width: 22vw;
+    height: fit-content;
+    width: 100%;
     background-color: rgb(29, 23, 23)
 }
 .kit_img:hover img{
@@ -562,26 +569,45 @@ h4, h3{
 .img_title > h5{
     margin-top: 3vh;
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 200;
 }
 .img_title > p {
-    font-size: 35px;
-    margin:0
+    font-size: 2rem;
+    margin:0;
+    text-align: center;
 }
 .learn_more{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 4.5vh;
-    width: 8vw;
+    width: 180px;
     border: 1px solid white;
     border-radius: 2rem;
     color: white;
+    margin-bottom: 50px;
 }
 
-
-
+@media only screen and (max-width:1300px){
+    main{
+        width: 90vw;
+    }
+    nav{
+        width: 90vw;
+    }
+    .nav_bottom{
+        width: 90vw;
+    }
+    .nav_bottom > *{
+        display: flex;
+        align-items: center;
+    }
+    .icon_container .menu{
+        fill:white;
+        display: block;
+        cursor: pointer;
+    }
 
 
 
