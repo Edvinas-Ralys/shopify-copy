@@ -7,6 +7,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    /* width: 100%; */
 }
 .title_screen{
     height: 14vh;
@@ -22,7 +23,7 @@ body{
 /* Setting slider background image */
 .slider_image{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     object-fit: cover;
     position: absolute;
     z-index: -1;
@@ -593,15 +594,43 @@ h4, h3{
     main{
         width: 90vw;
     }
-    nav{
-        width: 90vw;
-    }
     .nav_bottom{
         width: 90vw;
     }
     .nav_bottom > *{
         display: flex;
+        /* border: 2px solid black; */
+        fill: black;
+    }
+    .nav_bottom {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 100vh;
+        align-items: flex-start;
+        justify-content: start;
+        gap:10px;
+        top: 0;
+        right: -200px;
+        position:absolute;
+        transition: translateX(30vw);
+        color: black;
+        background-color: white;
+        transition: transfomr 0.5s ease-in-out;
+    }
+    input:checked + .nav_bottom{
+        transform: translateX(100px);
+    }
+
+    .chevron_down{
+        fill: black;
+        transform: rotate(-90deg);
+    }
+    .shop, .bestseller{
+        display: flex;
         align-items: center;
+        width: 100%;
+        justify-content: space-between;
     }
     .icon_container .menu{
         fill:white;
