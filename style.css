@@ -1,6 +1,4 @@
-html{
-    overflow-x: hidden;
-}
+
 body{
     font-family:sans-serif ;
     margin: 0;
@@ -14,6 +12,9 @@ main{
     display: flex;
     flex-direction: column;
     width: 70vw;
+}
+html, body{
+    overflow-x: hidden;
 }
 .title_screen{
     height: 14vh;
@@ -621,7 +622,7 @@ h4, h3{
         cursor: pointer;
     }
     .menu_window{
-        display: flex;
+        display: none;
         height: 100vh;
         width: 50vw;
         border:2px solid white;
@@ -633,10 +634,11 @@ h4, h3{
         background-color: white;
     }
     input:checked + .menu_window{
+        display: flex;
         transform: translateX(0);
     }
     .search_window, .shopping_cart_menu{
-        /* display: hidden; */
+        display: none;
         flex-direction: column;
         background-color: white;
         width: 50vw;
@@ -647,6 +649,13 @@ h4, h3{
         transform: translateX(50vw);
         transition: transform 0.3s ease-in-out;
     }
+    input:checked + .search_window{
+        display: flex;
+        transform: translateX(0);
+    }
+    input:checked + .shopping_cart_menu{
+        display: flex;
+        transform: translateX(0);
 
 }
 
