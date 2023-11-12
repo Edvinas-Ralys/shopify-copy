@@ -594,49 +594,31 @@ h4, h3{
     main{
         width: 90vw;
     }
-    .nav_bottom{
-        width: 90vw;
-    }
-    .nav_bottom > *{
-        display: flex;
-        /* border: 2px solid black; */
-        fill: black;
-    }
     .nav_bottom {
-        display: flex;
-        flex-direction: column;
-        width: 300px;
-        height: 100vh;
-        align-items: flex-start;
-        justify-content: start;
-        gap:10px;
-        top: 0;
-        right: -200px;
-        position:absolute;
-        transition: translateX(30vw);
-        color: black;
-        background-color: white;
-        transition: transfomr 0.5s ease-in-out;
-    }
-    input:checked + .nav_bottom{
-        transform: translateX(100px);
-    }
-
-    .chevron_down{
-        fill: black;
-        transform: rotate(-90deg);
-    }
-    .shop, .bestseller{
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: space-between;
+        display: none;
     }
     .icon_container .menu{
         fill:white;
         display: block;
         cursor: pointer;
     }
+    .menu_window{
+        /* display: none; */
+        height: 100vh;
+        width: 25vw;
+        border:2px solid white;
+        position: absolute;
+        top:0;
+        right: 0;
+        transform: translateX(30vw);
+        transition: transform 0.3s ease-in-out;
+        background-color: white;
+    }
+    input:checked + .menu_window{
+        transform: translateX(0);
+    }
+
+}
 
 
 
