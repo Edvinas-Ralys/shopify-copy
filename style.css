@@ -710,10 +710,55 @@ h4, h3{
     padding-right: 10px;
     border-radius: 1rem;
 }
-
 .made_img{
     height: 2vh;
     opacity: 50%;
+}
+.bundles_all_products{
+    border: 1px solid black;
+    border-radius: 2rem;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.mid_banner{
+    display: flex;
+    position: relative;
+    left: -15vw;
+    width: 100vw;
+    height: 75vh;
+    border: 2px solid black;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+.grey_side{
+    background-color: rgba(191, 204, 189, 0.308) ;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.grey_side_txt{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 60%;
+    gap: 5rem;
+}
+.img_side{
+    width: 50%;
+}
+.img_side > .grey_img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 
@@ -823,6 +868,9 @@ h4, h3{
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    .bundles_all_products{
+        width: 80%;
     }
 
 }
