@@ -611,6 +611,56 @@ h4, h3{
     color: white;
 }
 
+/* Sets and bundles section */
+.bundles_bot{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    border: 2px solid black;
+}
+/* Elements */
+.bundles_element{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.element_txt > p, .element_title > p, .star_rating > p{
+    margin:0;
+}
+.element_title > p{
+    font-weight: 900;
+    font-size: 1rem;
+}
+.element_star{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+
+.bundles_top{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+}
+
+.element_img{
+    border:2px solid black;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2vh;
+}
+.element_img > img{
+    width: 100%;
+    height: auto;
+}
+.star{
+    height: 2vh;
+}
+
+
+
 @media only screen and (max-width:1060px){
     main{
         width: 90vw;
@@ -704,7 +754,7 @@ h4, h3{
     .menu_bot{
         display: flex;
         flex-direction: column;
-        width: 80%;
+        width: 85%;
         gap:1rem;
     }
     .menu_home{
