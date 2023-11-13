@@ -7,6 +7,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-family: inter;
 }
 main{
     display: flex;
@@ -724,32 +725,35 @@ h4, h3{
     text-align: center;
     cursor: pointer;
 }
+
+
+
 .mid_banner{
-    display: flex;
-    position: relative;
-    left: -15vw;
-    width: 100vw;
-    height: 75vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     border: 2px solid black;
     margin-top: 150px;
     margin-bottom: 150px;
 }
 .grey_side{
-    background-color: rgba(191, 204, 189, 0.308) ;
+    background-color: rgba(202, 202, 202, 0.308) ;
     width: 50%;
+    position: relative;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: nowrap;
     overflow: hidden;
 }
 .grey_side_txt{
+    height: 100%;
     border: 2px solid black;
     display: flex;
-    flex-direction: column;
     width: fit-content;
-    height: 60%;
-    gap: 5rem;
+    gap:3rem;
+    position: relative;
+    right: -15vw;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .img_side{
     width: 50%;
@@ -759,6 +763,19 @@ h4, h3{
     width: 100%;
     object-fit: cover;
     object-position: center;
+}
+.grey_big_txt{
+    font-size: 80px;
+    border: 2px solid green;
+    width: 80%;
+    margin:0;
+    width: min-content;
+}
+.grey_small_txt{
+    font-size: 15px;
+}
+.grey_mid_txt{
+    font-size: 18px;
 }
 
 
