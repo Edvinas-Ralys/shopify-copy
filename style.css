@@ -125,13 +125,15 @@ input:checked + .search_window{
     display: flex;
     height: 9vh;
     align-items: center;
-    justify-content: center;
     justify-content: space-between;
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 2vw;
     padding-right: 2vw;
     border-bottom: 1px solid grey;
     border-bottom: 1px solid grey;
+    z-index: 100;
 }
 .search_input{
     display: flex;
@@ -164,13 +166,12 @@ input:checked + .shopping_cart_menu{
     flex-direction: column;
 }
 .browsing_button{
+    align-self: center;
     margin-top: 2vh;
     display: flex;
     width: fit-content;
     height: 5vh;
-    margin-left: auto;
-    margin-right: auto;
-    width: 21vw;
+    width: max(250px, 18vw) ;
     border-radius:6vh;
     background-color: black;
     cursor: pointer;
@@ -475,6 +476,7 @@ h4, h3{
 
 /* Box of text on title screen */
 .placeholder_txt{
+    z-index: -1;
     display: flex;
     gap: 1vh;
     flex-direction: column;
@@ -545,7 +547,7 @@ h4, h3{
     gap: 2vw;
 }
 .kit_img{
-    height: 8vh;
+    height: fit-content;
     overflow: hidden;
     border-radius: 1rem;
 }
@@ -624,12 +626,12 @@ h4, h3{
     .menu_window{
         display: none;
         height: 100vh;
-        width: 50vw;
+        width: 100vw;
         border:2px solid white;
         position: absolute;
         top:0;
         right: 0;
-        transform: translateX(50vw);
+        transform: translateX(100vw);
         transition: transform 0.3s ease-in-out;
         background-color: white;
     }
@@ -641,12 +643,12 @@ h4, h3{
         display: none;
         flex-direction: column;
         background-color: white;
-        width: 50vw;
+        width: 100vw;
         height: 100vh;
         position: absolute;
         top: 0;
         right: 0;
-        transform: translateX(50vw);
+        transform: translateX(100vw);
         transition: transform 0.3s ease-in-out;
     }
     input:checked + .search_window{
@@ -657,7 +659,7 @@ h4, h3{
         display: flex;
         transform: translateX(0);
 
-}
+}}
 
 
 
@@ -665,10 +667,14 @@ h4, h3{
     .kit_up_bottom{
         flex-direction: column;
     }
-}   .kit_img{
+}
+  .kit_img{
     height: 95vh;
     display: flex;
     flex-direction: column;
+}
+.img_title{
+    height: 20vh;
 }
 .kit_img img{
     height: 80%;
