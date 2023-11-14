@@ -1107,7 +1107,7 @@ h4, h3{
         flex-wrap: wrap;
     }
     .grey_side{
-        height: 70%;
+        height: 100%;
         width: 100vw;
         justify-content: center;
         align-items: center;
