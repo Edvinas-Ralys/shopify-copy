@@ -489,7 +489,7 @@ h4, h3{
     gap: 1vh;
     flex-direction: column;
     position:relative;
-    margin-top: 50vh;
+    margin-top: 45vh;
     height: 30vh;
     width: 100%;
     color: white;
@@ -739,6 +739,7 @@ h4, h3{
     margin-bottom: 150px;
 }
 .grey_side{
+    width: 50vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -755,12 +756,11 @@ h4, h3{
     font-size: 15px;
 }
 .grey_big_txt{
-    font-size: 80px;
+    font-size: 70px;
     max-width: fit-content;
 }
 .grey_mid_txt{
     width: max-content;
-    /* font-size: 15px; */
 }
 .grey_show_more{
     display: flex;
@@ -773,13 +773,72 @@ h4, h3{
     background-color: black;
 
 }
-
 .grey_img{
     width: 50vw;
-    height: 70vh;
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
+
+
+
+.sets{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.sets_top{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+.sets_bottom{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+}
+.set_img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+
+}
+.set_img > img:hover{
+    scale: 1.05;
+    transition: 0.3s ease-in-out;
+}
+.set_img{
+    overflow: hidden;
+    border:2px dashed tomato
+}
+
+
+
+
+.set_item{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: fit-content;
+    background-color: rgba(201, 197, 197, 0.13);
+    border-radius: 15px;
+    border:2px solid green;
+    overflow: hidden;
+}
+.set_txt{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    width: fit-content;
+    margin-left: 20px;
+}
+.set_clr_opt{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
 
 
 
@@ -892,6 +951,17 @@ h4, h3{
     .bundles_all_products{
         width: 80%;
     }
+    .mid_banner{
+        left: -5vw;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .mid_banner{
+        display: flex;
+    }
+    .grey_mid_txt{
+        width: fit-content;
+    }
 
 }
 
@@ -950,6 +1020,7 @@ h4, h3{
         display: flex;
         flex-wrap: wrap;
         width: 90%;
+        width: fit-content;
     }
     .grey_big_txt{
         font-size: 8vw;
