@@ -796,8 +796,11 @@ h4, h3{
 }
 .sets_bottom{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap:1vw;
+}
+.sets_top > p{
+    text-align: center;
 }
 .set_img > img{
     width: 100%;
@@ -1121,7 +1124,15 @@ h4, h3{
     .grey_big_txt{
         font-size: 8vw;
     }
-
+    .sets_bottom{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        justify-items: center;
+    }
+    .set_item{
+        width: 100%;
+    }
 
 
 }
