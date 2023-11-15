@@ -1000,9 +1000,9 @@ h4, h3{
     height: 70vh;
     width: 100vw;
     overflow: hidden;
+    margin-bottom: 50px;
   }
   .banner_2 > img{
-
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -1023,7 +1023,89 @@ h4, h3{
   .first_txt{
     font-size: 62px;
   }
+  .mix_match{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+  .mix_content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 1rem;
+  }
+  .mix_element{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  .mix_img{
+    overflow: hidden;
+    transition: 0.3 ease-in-out;
+  }
+  .mix_img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3 ease-in-out;
+  }
+  .mix_img > img:hover{
+    transition: 0.3 ease-in-out;
+    scale: 1.05;
 
+  }
+  .mix_cont{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .mix_cont > .mix_price{
+    margin:0;
+    font-size: 15px;
+  }
+  .mix_title{
+    font-weight: 700;
+    font-size: 18px;
+    margin:0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.404);
+    padding-bottom: 20px;
+  }
+  .mix_clr > p{
+    margin: 0;
+  }
+  .mix_clr{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .clrs_available{
+    font-size: 15px;
+    color: rgba(128, 128, 128, 0.74);
+  }
+  .mix_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid rgba(128, 128, 128, 0.397);
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+  .mix_clr_selection{
+    display: flex;
+    gap: 0.7rem;
+  }
+  .mix_clr_1, .mix_clr_2{
+    height: 40px;
+    aspect-ratio: 1;
+    border: 1px solid gray;
+    border-radius: 50%;
+  }
+  .mix_clr_1{
+    background-color: rgba(168, 149, 134, 0.589);
+  }
+  .mix_clr_2{
+    background-color: rgba(255, 217, 0, 0.616);
+  }
 
 
 
