@@ -994,6 +994,37 @@ h4, h3{
     margin: 0;
   }
 
+  .banner_2{
+    position: relative;
+    left:-15vw;
+    height: 70vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .banner_2 > img{
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
+  .banner_2_txt{
+    position:absolute;
+    bottom:50px;
+    left: 15vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .banner_2_txt > p{
+    margin: 0;
+  }
+  .first_txt{
+    font-size: 62px;
+  }
+
+
 
 
 
@@ -1111,6 +1142,16 @@ h4, h3{
     .mid_banner{
         left: -5vw;
     }
+    .banner_2{
+        left:-5vw;
+    }
+    .banner_2_txt{
+        left: 5vw;
+    }
+
+
+
+
 }
 @media only screen and (max-width: 1000px){
     .mid_banner{
@@ -1197,6 +1238,7 @@ h4, h3{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.5fr;
         height: fit-content;
+        gap:0;
     }
     .bottle_img > img{
         object-fit: cover;
@@ -1206,7 +1248,15 @@ h4, h3{
     .bottle_style{
         font-size: min(8vw, 25px);
     }
-
+    .banner_2_txt{
+        font-size: min(32px, 4vw);
+    }
+    .first_txt{
+        font-size: min(65px, 13vw);
+    }
+    .secon_txt{
+        font-size: min(20px, 5vw);
+    }
 
 }
 
