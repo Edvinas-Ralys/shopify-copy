@@ -1001,6 +1001,7 @@ h4, h3{
     width: 100vw;
     overflow: hidden;
     margin-bottom: 50px;
+    padding-bottom: 150px;
   }
   .banner_2 > img{
     height: 100%;
@@ -1010,7 +1011,7 @@ h4, h3{
   }
   .banner_2_txt{
     position:absolute;
-    bottom:50px;
+    bottom:300px;
     left: 15vw;
     color: white;
     display: flex;
@@ -1023,6 +1024,39 @@ h4, h3{
   .first_txt{
     font-size: 62px;
   }
+  .strip{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 10px;
+    width: 200%;
+    left: -50vw;
+    gap: 45px;
+    z-index: 100;
+    font-size: min(25px, 3vh);
+    color: white;
+    background-color: black;
+    fill: white;
+    height: 5vh;
+    overflow: hidden;
+  }
+  .strip_part{
+    display: flex;
+    align-items: center;
+  }
+  .strip_icon{
+    height: 3vh;
+  }
+  .strip_part > p {
+    margin: 0;
+  }
+
+
+
+
+
+
   .mix_match{
     display: grid;
     grid-template-columns: 3fr 1fr;
