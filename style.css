@@ -381,6 +381,7 @@ nav{
     background-size: 100% 1px;
     color: inherit;
 }
+
 .bestseller_item:hover img{
     position: relative;
     top: -15px;
@@ -1030,8 +1031,8 @@ h4, h3{
     align-items: center;
     justify-content: center;
     bottom: 10px;
-    width: 200%;
-    left: -50vw;
+    width: 300%;
+    left: -100vw;
     gap: 45px;
     z-index: 100;
     font-size: min(25px, 3vh);
@@ -1059,7 +1060,9 @@ h4, h3{
 
   .mix_match{
     display: grid;
+    gap: 1rem;
     grid-template-columns: 3fr 1fr;
+    overflow: visible;
   }
   .mix_content{
     display: grid;
@@ -1080,11 +1083,11 @@ h4, h3{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: 0.3 ease-in-out;
+    transition: 0.2s ease-in-out;
   }
   .mix_img > img:hover{
-    transition: 0.3 ease-in-out;
-    scale: 1.05;
+    transition: 0.2s ease-in-out;
+    scale: 1.07;
 
   }
   .mix_cont{
@@ -1100,8 +1103,15 @@ h4, h3{
     font-weight: 700;
     font-size: 18px;
     margin:0;
+    height: 40px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.404);
-    padding-bottom: 20px;
+  }
+  .mix_title > p{
+    margin:0;
+    width: fit-content;
+  }
+  .title_no_underline{
+    border-bottom: none;
   }
   .mix_clr > p{
     margin: 0;
@@ -1130,7 +1140,6 @@ h4, h3{
   }
   .mix_clr_1, .mix_clr_2{
     height: 40px;
-    aspect-ratio: 1;
     border: 1px solid gray;
     border-radius: 50%;
   }
@@ -1139,6 +1148,30 @@ h4, h3{
   }
   .mix_clr_2{
     background-color: rgba(255, 217, 0, 0.616);
+  }
+
+  .mix_options{
+    display: grid;
+    width: 5vw;
+    height: 30vh;
+    border: 2px dashed purple;
+    position: relative;
+  }
+  .mix_slider_cont{
+    display: grid;
+    grid-template-columns: 1;
+    border: 2px dashed tomato
+  }
+  .mix_slider{
+    position: sticky;
+    height: 20%;
+    background-color: gray;
+    top: 50px;
+    left: 0;
+    border: 1px solid black;
+    width: 200px;
+    padding: 0;
+    margin: 0;
   }
 
 
