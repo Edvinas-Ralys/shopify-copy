@@ -1160,19 +1160,81 @@ h4, h3{
   .mix_slider_cont{
     display: grid;
     grid-template-columns: 1;
-    border: 2px dashed tomato
   }
   .mix_slider{
-    position: sticky;
-    height: 20%;
-    background-color: gray;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.89);
     top: 50px;
-    left: 0;
     border: 1px solid black;
-    width: 200px;
+    width: 100%;
+    border-radius: 10px ;
     padding: 0;
     margin: 0;
+    color: white;
+    gap:20px;
+    position: sticky;
+    top: 0;
   }
+  .slider_title{
+    margin-top: 25px;
+    gap:0.7rem;
+    height: fit-content;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+  }
+  .slider_title > p, .slider_title > h6 {
+    margin: 0;
+  }
+  .slider_title > p{
+    font-size: 15px;
+  }
+  .slider_title > h6{
+    font-size: 20px;
+  }
+  .slider_item_cont{
+    height: fit-content;
+    width: 80%;
+    display: flex;
+    gap: 15px;
+  }
+  .slider_circle{
+    height: 60px;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    border: 1px solid rgba(128, 128, 128, 0.603);
+  }
+  .slider_recta{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .top_recta{
+    width: 90px;
+    height: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.603);
+  }
+  .bottom_recta{
+    width: 120px;
+    height: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.603);
+  }
+  .slider_button{
+    height: 45px;
+    width: 80%;
+    background-color: rgba(128, 128, 128, 0.603);
+    border-radius: 2rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
 
 
 
