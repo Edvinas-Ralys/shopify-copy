@@ -1014,7 +1014,7 @@ h4, h3{
   }
   .banner_2_txt{
     position:absolute;
-    bottom:300px;
+    bottom:150px;
     left: 15vw;
     color: white;
     display: flex;
