@@ -116,8 +116,9 @@ nav{
     margin-bottom: 0;
 }
 .shopping_cart_bot > p{
-    padding-left: 2vw;
+    padding-left: 6vw;
     margin-top:3vh;
+    width: fit-content;
 }
 input:checked + .search_window{
     transform: translateX(0);
@@ -1477,6 +1478,7 @@ h4, h3{
     }
     .banner_2_txt{
         left: 5vw;
+        bottom: 150px;
     }
     .footer_sections > *{
         width: 90vw;
@@ -1634,7 +1636,7 @@ h4, h3{
         display: none;
     }
     .mix_slider{
-        padding-left: 20px;
+        /* padding-left: 20px; */
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
@@ -1643,6 +1645,12 @@ h4, h3{
     }
     .second_cont{
         grid-column:3/5 ;
+    }
+    .slider_title{
+        margin-left: 20px;
+    }
+    .slider_item_cont{
+        margin-left: 20px;
     }
 
 }
