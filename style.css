@@ -526,6 +526,7 @@ h4, h3{
     display: flex;
     height: fit-content;
     justify-content: center;
+    width: 100%;
 }
 .kit_up_content{
     width: 100%;
@@ -1037,7 +1038,7 @@ h4, h3{
     z-index: 100;
     font-size: min(25px, 3vh);
     color: white;
-    background-color: black;
+    background-color: rgb(39, 37, 37);
     fill: white;
     height: 5vh;
     overflow: hidden;
@@ -1052,17 +1053,12 @@ h4, h3{
   .strip_part > p {
     margin: 0;
   }
-
-
-
-
-
-
   .mix_match{
     display: grid;
     gap: 1rem;
     grid-template-columns: 3fr 1fr;
     overflow: visible;
+    margin-bottom: 70px;
   }
   .mix_content{
     display: grid;
@@ -1205,17 +1201,18 @@ h4, h3{
     border: 1px solid rgba(128, 128, 128, 0.603);
   }
   .slider_recta{
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
   .top_recta{
-    width: 8vw;
+    width: 30%;
     height: 15px;
     border: 1px solid rgba(128, 128, 128, 0.603);
   }
   .bottom_recta{
-    width: 10vw;
+    width: 50%;
     height: 15px;
     border: 1px solid rgba(128, 128, 128, 0.603);
   }
@@ -1230,6 +1227,132 @@ h4, h3{
     align-items: center;
     margin-bottom: 25px;
   }
+  .bottom_banner{
+
+    position: relative;
+    left:-15vw;
+    height: 90vh;
+    width: 100vw;
+    overflow: hidden;
+    padding-bottom: 35px;
+
+  }
+  .bottom_banner > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .footer{
+    position: relative;
+    left: -15vw;
+    width: 130vw;
+    background-color: black;
+    color: white;
+  }
+  .first_section{
+    position: relative;
+    left: 15vw;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 60px;
+    border-bottom: 1px solid gray;
+  }
+
+  .footer_sections{
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    gap:2rem;
+  }
+  .big_text{
+    font-size: 55px;
+    width: 70vw;
+  }
+  .small_text{
+    font-size: 18px;
+  }
+  .footer_button{
+    height: 50px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .middle_section{
+    width: 70vw;
+    position: relative;
+    left: 15vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    padding-bottom: 30px;
+    border-bottom: 1px solid gray;
+  }
+  .first_col_title{
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+  }
+  .media_icon{
+    fill: white;
+    height: 30px;
+    cursor: pointer;
+  }
+  .first_col_icons{
+    display: flex;
+    gap: 15px;
+  }
+  .second_col > p {
+    cursor: pointer;
+    margin: 0;
+  }
+  .second_col{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .second_col_title > p{
+    margin-top: 0;
+    font-weight: 600;
+  }
+  .third_col > p{
+    margin: 0;
+  }
+  .third_col_title > p{
+    font-weight: 600;
+    margin-top: 0;
+  }
+
+  .newsletter{
+    border: 1px solid white;
+    height: 45px;
+    width: 80%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .fourth_col_title{
+    padding-bottom: 10px;
+    font-weight: 600    ;
+  }
+  .last_section{
+    position: relative;
+    left: 15vw;
+    padding-bottom: 30px;
+  }
+
+
 
 
 
@@ -1349,7 +1472,7 @@ h4, h3{
     .mid_banner{
         left: -5vw;
     }
-    .banner_2{
+    .banner_2, .bottom_banner{
         left:-5vw;
     }
     .banner_2_txt{
@@ -1467,7 +1590,8 @@ h4, h3{
     .mix_match{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows:4fr 1fr ;
+        grid-template-rows:4fr 0.4fr ;
+
     }
 
     .mix_slider{
