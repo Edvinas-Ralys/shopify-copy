@@ -1478,6 +1478,12 @@ h4, h3{
     .banner_2_txt{
         left: 5vw;
     }
+    .footer_sections > *{
+        width: 90vw;
+    }
+    .footer_sections{
+
+    }
 
 
 
@@ -1612,6 +1618,14 @@ h4, h3{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
 
+    }
+    .first_section > .big_text{
+        width: fit-content;
+    }
+    .middle_section{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap:30px;
     }
 
 }
