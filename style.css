@@ -558,7 +558,6 @@ h4, h3{
     gap: 2vw;
 }
 .kit_img{
-    width: 33%;
     height: fit-content;
     overflow: hidden;
     border-radius: 1rem;
